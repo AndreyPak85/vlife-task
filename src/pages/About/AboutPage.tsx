@@ -1,3 +1,12 @@
+import { Header } from '../../components/Header';
+
 export const AboutPage = () => {
-  return <>About Page</>;
+  return (
+    <>
+      <Header />
+      <div className='about-page'>
+        <div className='container'>About Page</div>
+      </div>
+    </>
+  );
 };
