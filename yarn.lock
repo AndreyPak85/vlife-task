@@ -2060,6 +2060,13 @@
     "@types/history" "*"
     "@types/react" "*"
 
+"@types/react-table@^7.7.6":
+  version "7.7.6"
+  resolved "https://registry.yarnpkg.com/@types/react-table/-/react-table-7.7.6.tgz#4899ccc46b4a1de08cc1daf120842e37e112e51e"
+  integrity sha512-ZMFHh1sG5AGDmhVRpz9mgGByGmBFAqnZ7QnyqGa5iAlKtcSC3vb/gul47lM0kJ1uvlawc+qN5k+++pe+GBdJ+g==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-transition-group@^4.4.3":
   version "4.4.3"
   resolved "https://registry.yarnpkg.com/@types/react-transition-group/-/react-transition-group-4.4.3.tgz#b0994da0a7023d67dbb4a8910a62112bc00d5688"

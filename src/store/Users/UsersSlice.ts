@@ -9,15 +9,24 @@ const usersSlice = createSlice({
     isLoading: true,
     users: userSliceState,
   },
-  reducers: {},
+  reducers: {
+    // removeUser(state, action) {
+    //   state.users.splice(action.payload, 1);
+    // },
+  },
   extraReducers: (builder) => {
     builder.addCase(asyncGetUsersThunk.pending, (state, action) => {
       state.isLoading = true;
     });
     builder.addCase(asyncGetUsersThunk.fulfilled, (state, action) => {
-      action.payload.forEach((element: IUsersSlice) => {
-        state.users.push(element);
-      });
+      // action.payload.forEach((element: IUsersSlice) => {
+      //   state.users.push({
+      //     id: element.id,
+      //     username: element.username,
+      //     email: element.email,
+      //     website: element.website,
+      //   });
+      // });
       state.isLoading = false;
     });
     builder.addCase(asyncGetUsersThunk.rejected, (state, action) => {
@@ -27,3 +36,4 @@ const usersSlice = createSlice({
 });
 
 export default usersSlice.reducer;
+// export const { removeUser } = usersSlice.actions;
