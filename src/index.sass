@@ -1,3 +1,5 @@
+@import './utils/variables.sass'
+
 *, body
   margin: 0
   padding: 0
@@ -10,7 +12,12 @@
   width: 1240px
   height: 100%
 
-@import './utils/variables.sass'
+.active-link
+  padding-bottom: 0.2em
+  color: $mainColor !important
+  font-weight: 600
+  border-bottom: 2px solid $mainColor
+
 //components
 @import './components/Header/Header.sass'
 //pages

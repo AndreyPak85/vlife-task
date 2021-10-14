@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom';
+
 import { icons } from '../../utils/icons';
 
 export const Header = () => {
@@ -11,8 +13,16 @@ export const Header = () => {
             </div>
             <nav className='header__nav'>
               <ul className='header__nav__wrapper'>
-                <li className='header__nav__item'>Main Page</li>
-                <li className='header__nav__item'>About Page</li>
+                <li className='header__nav__item'>
+                  <NavLink exact to='/' activeClassName='active-link'>
+                    Main Page
+                  </NavLink>
+                </li>
+                <li className='header__nav__item'>
+                  <NavLink exact to='/about' activeClassName='active-link'>
+                    About Page
+                  </NavLink>
+                </li>
               </ul>
             </nav>
           </div>

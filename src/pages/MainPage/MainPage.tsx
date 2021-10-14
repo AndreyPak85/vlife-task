@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { asyncGetUsersThunk } from '../../store/Users/UsersThunk';
 //components
 import { Header } from '../../components/Header';
+import { Loader } from '../../components/Loader';
 
 export const MainPage = () => {
   const dispatch = useDispatch();
