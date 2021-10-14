@@ -6,18 +6,23 @@ import { asyncGetUsersThunk } from './UsersThunk';
 const usersSlice = createSlice({
   name: 'users',
   initialState: {
-    isLoading: false,
+    isLoading: true,
     users: userSliceState,
   },
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(asyncGetUsersThunk.pending, (state, action) => {});
+    builder.addCase(asyncGetUsersThunk.pending, (state, action) => {
+      state.isLoading = true;
+    });
     builder.addCase(asyncGetUsersThunk.fulfilled, (state, action) => {
       action.payload.forEach((element: IUsersSlice) => {
         state.users.push(element);
       });
+      state.isLoading = false;
     });
-    builder.addCase(asyncGetUsersThunk.rejected, (state, action) => {});
+    builder.addCase(asyncGetUsersThunk.rejected, (state, action) => {
+      state.isLoading = false;
+    });
   },
 });
 

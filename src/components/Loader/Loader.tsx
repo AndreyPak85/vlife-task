@@ -6,8 +6,12 @@ export const Loader = () => {
         xmlnsXlink='http://www.w3.org/1999/xlink'
         style={{
           margin: 'auto',
-          background: 'rgb(255, 255, 255)',
-          display: 'block',
+          position: 'absolute',
+          top: '0',
+          bottom: '0',
+          left: '0',
+          right: '0',
+          background: 'none',
           shapeRendering: 'auto',
         }}
         width='200px'
