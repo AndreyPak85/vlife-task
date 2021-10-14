@@ -1,46 +1,49 @@
-# Getting Started with Create React App
+## Vlife task
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Todo:**
 
-## Available Scripts
+- Реализовать таблицу на React. Стили на ваше усмотрение.
+  Данные брать тут https://jsonplaceholder.typicode.com/users
+- Первая колонка - чекбокс. Можно выделить несколько чекбоксов, нельзя убрать все
+- чекбоксы, хотя бы один всегда должен остаться.
+- Вторая - вывод поля id
+- Третья - кнопка перехода в другой инструмент, с передачей id как параметра. По клику на “Подробнее” открывать страницу с url '/users/[id]', ее оставить пустой
+- Четвертая - и далее вывод соответствующих параметров
+- Последняя - удаление строки. По клику строку удалять, состояние можно не хранить. Стили в финальном результате не важны, но бонусом будет опрятный продуктовый вид.
+- Использовать ES5, ES6, TS по усмотрению. За TS отдельный бонусный балл. Фреймворк - React, таблица - react-table [желательно самый свежий ], либо аналогичный модуль на выбор (выбор обосновать) , важна функциональность фильтраций и пагинаций
+- Бонус уровень: Сортировка по одному полю на выбор, пагинация (в массиве 10
+  элементов, сделать две страницы по 5)
 
-In the project directory, you can run:
+**Для проверки задания выполнить команды:**
 
-### `yarn start`
+```
+1. git clone https://github.com/AndreyPak85/vlife-task.git
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+2. yarn add package.json
+    или
+   npm i
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+3. yarn start
+    или
+   npm run start
 
-### `yarn test`
+4. Открыть адрес в браузере localhost:3000
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Альтернативная проверка задания, путем запуска Docker контейнера**
 
-### `yarn build`
+```
+1. Запустить команду
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+docker run -it -p 3000:3000 013274418/vlife
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Закрыть контейнер Ctrl + C
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
 
-### `yarn eject`
+Все основные пункты задания выполнены.
+Нуждается в дополнительной стилизации проекта и попробовать связать все со стейтом store.
+Ориентировочное время выполнения задания: ~8 часов
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+<font style="font-size:10pt; font-family: Verdana; font-style: italic;" >Задание выполнил Андрей П.
+контактный телефон: +7 701 737 0818</font>
