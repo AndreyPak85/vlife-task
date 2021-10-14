@@ -1,12 +1,16 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+
 //pages
 import { MainPage } from './pages/MainPage';
+//store
+import { store } from './store/index';
 
 function App() {
   return (
-    <div className='App'>
+    <Provider store={store}>
       <MainPage />
-    </div>
+    </Provider>
   );
 }
 

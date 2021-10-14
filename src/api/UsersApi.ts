@@ -1,7 +1,11 @@
 import { instance } from './instance';
 
 export const usersApi = {
-  getUsers: () => {
-    return instance.get('/users');
+  getUsers() {
+    try {
+      return instance.get('/users');
+    } catch (error) {
+      throw error;
+    }
   },
 };
