@@ -1,22 +1,12 @@
-import { useMemo, useState } from 'react';
 import { useTable, usePagination } from 'react-table';
-import { useSelector, useDispatch } from 'react-redux';
-
-import { removeUser } from '../../store/Users/UsersSlice';
 
 export const Table = ({ data, columns }) => {
-  // const dispatch = useDispatch();
-  // const users = useSelector((state) => state.users.users);
-
   const {
     getTableProps,
     getTableBodyProps,
     headerGroups,
     prepareRow,
-    page, // Instead of using 'rows', we'll use page,
-    // which has only the rows for the active page
-
-    // The rest of these things are super handy, too ;)
+    page,
     canPreviousPage,
     canNextPage,
     pageOptions,

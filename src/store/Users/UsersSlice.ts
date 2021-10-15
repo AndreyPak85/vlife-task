@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { userSliceState, IUsersSlice } from '../../ts/users';
+import { userSliceState } from '../../ts/users';
 
 import { asyncGetUsersThunk } from './UsersThunk';
 

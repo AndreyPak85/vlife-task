@@ -2,49 +2,30 @@ export const Table_ = () => {
   return null;
 };
 
-// import { useMemo } from 'react';
-// import { useTable, usePagination } from 'react-table';
-// import { useSelector, RootStateOrAny } from 'react-redux';
+// import { FC } from 'react';
+// import {
+//   useTable,
+//   usePagination,
+//   TableOptions,
+//   TableInstance,
+//   TableState,
+//   HeaderGroupPropGetter,
+// } from 'react-table';
 
 // import { IUsersSlice } from '../../ts/users';
 
-// export const Table = () => {
-//   const users = useSelector((state: RootStateOrAny) => state.users.users);
+// interface ITableProps {
+//   data: Array<IUsersSlice>;
+//   columns: Array<IUsersSlice>;
+// }
 
-//   const columns: Array<any> = useMemo(
-//     () => [
-//       { Header: '', accessor: 'checkbox' },
-//       { Header: 'ID', accessor: 'id' },
-//       { Header: '', accessor: 'more' },
-//       { Header: 'Username', accessor: 'username' },
-//       { Header: 'Email', accessor: 'email' },
-//       { Header: 'Website', accessor: 'website' },
-//       { Header: '', accessor: 'delete' },
-//     ],
-//     []
-//   );
-
-//   let data = users.map((item: IUsersSlice) => {
-//     return {
-//       checkbox: <input type='checkbox' />,
-//       id: item.id,
-//       more: <a href='/users/'>more</a>,
-//       username: item.username,
-//       email: item.email,
-//       website: item.website,
-//       delete: <button>delete</button>,
-//     };
-//   });
-
+// export const Table: FC<ITableProps> = ({ data, columns }) => {
 //   const {
 //     getTableProps,
 //     getTableBodyProps,
 //     headerGroups,
 //     prepareRow,
-//     page, // Instead of using 'rows', we'll use page,
-//     // which has only the rows for the active page
-
-//     // The rest of these things are super handy, too ;)
+//     page,
 //     canPreviousPage,
 //     canNextPage,
 //     pageOptions,
@@ -54,11 +35,11 @@ export const Table_ = () => {
 //     previousPage,
 //     setPageSize,
 //     state: { pageIndex, pageSize },
-//   } = useTable<any>(
+//   }: any = useTable<any>(
 //     {
 //       columns,
 //       data,
-//       initialState: { pageIndex: 2 },
+//       initialState: { pageIndex: 0, pageSize: 5 },
 //     },
 //     usePagination
 //   );
@@ -67,7 +48,7 @@ export const Table_ = () => {
 //     <>
 //       <table {...getTableProps()}>
 //         <thead>
-//           {headerGroups.map((headerGroup) => (
+//           {headerGroups.map((headerGroup: HeaderGroupPropGetter<any>) => (
 //             <tr {...headerGroup.getHeaderGroupProps()}>
 //               {headerGroup.headers.map((column) => (
 //                 <th {...column.getHeaderProps()}>{column.render('Header')}</th>
@@ -76,7 +57,7 @@ export const Table_ = () => {
 //           ))}
 //         </thead>
 //         <tbody {...getTableBodyProps()}>
-//           {page.map((row, i) => {
+//           {page.map((row, i: number) => {
 //             prepareRow(row);
 //             return (
 //               <tr {...row.getRowProps()}>
@@ -91,27 +72,30 @@ export const Table_ = () => {
 //         </tbody>
 //       </table>
 
-//       <div className='pagination'>
+//       <div
+//         className='pagination'
+//         style={{ marginTop: '30px', position: 'absolute', right: '20px' }}
+//       >
 //         <button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
 //           {'<<'}
-//         </button>{' '}
+//         </button>
 //         <button onClick={() => previousPage()} disabled={!canPreviousPage}>
 //           {'<'}
-//         </button>{' '}
+//         </button>
 //         <button onClick={() => nextPage()} disabled={!canNextPage}>
 //           {'>'}
-//         </button>{' '}
+//         </button>
 //         <button onClick={() => gotoPage(pageCount - 1)} disabled={!canNextPage}>
 //           {'>>'}
-//         </button>{' '}
+//         </button>
 //         <span>
-//           Page{' '}
+//           Page
 //           <strong>
 //             {pageIndex + 1} of {pageOptions.length}
-//           </strong>{' '}
+//           </strong>
 //         </span>
 //         <span>
-//           | Go to page:{' '}
+//           | Go to page:
 //           <input
 //             type='number'
 //             defaultValue={pageIndex + 1}
@@ -121,14 +105,14 @@ export const Table_ = () => {
 //             }}
 //             style={{ width: '100px' }}
 //           />
-//         </span>{' '}
+//         </span>
 //         <select
 //           value={pageSize}
 //           onChange={(e) => {
 //             setPageSize(Number(e.target.value));
 //           }}
 //         >
-//           {[10, 20, 30, 40, 50].map((pageSize) => (
+//           {[5].map((pageSize) => (
 //             <option key={pageSize} value={pageSize}>
 //               Show {pageSize}
 //             </option>

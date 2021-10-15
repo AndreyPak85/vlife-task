@@ -9,6 +9,8 @@ import { asyncGetUsersThunk } from '../../store/Users/UsersThunk';
 import { Header } from '../../components/Header';
 import { Loader } from '../../components/Loader';
 import { Table } from '../../components/Table';
+//ts
+import { IUsersSlice } from '../../ts/users';
 
 export const MainPage = () => {
   const dispatch = useDispatch();
@@ -16,7 +18,7 @@ export const MainPage = () => {
     (state: RootStateOrAny) => state.users.isLoading
   );
 
-  const [users, setUsers] = useState([
+  const [users, setUsers] = useState<Array<IUsersSlice>>([
     {
       checked: true,
       id: 1,
