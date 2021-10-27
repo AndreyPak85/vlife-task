@@ -47,5 +47,4 @@ docker run -it -p 3000:3000 013274418/vlife
 Нуждается в дополнительной стилизации проекта и попробовать связать все со стейтом store.
 Ориентировочное время выполнения задания: ~8 часов
 
-<font style="font-size:10pt; font-family: Verdana; font-style: italic;" >Задание выполнил Андрей П.
-контактный телефон: +7 701 737 0818</font>
+<font style="font-size:10pt; font-family: Verdana; font-style: italic;" >Задание выполнил Андрей П.</font>
